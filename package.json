@@ -1,0 +1,22 @@
+{
+  "name": "silabasjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "\"\"",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabrielperales/silabasjs.git"
+  },
+  "keywords": [
+    "silabas"
+  ],
+  "author": "Gabriel Perales",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabrielperales/silabasjs/issues"
+  },
+  "homepage": "https://github.com/gabrielperales/silabasjs"
+}
