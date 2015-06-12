@@ -78,4 +78,10 @@ describe('librería sílabas', function() {
     expect(silabas.esConsonante('í')).toBeFalsy();
     expect(silabas.esConsonante('ó')).toBeFalsy();
   });
+
+  it('debe reconocer diptongos', function() {
+    expect(silabas.esDiptongo('avión')).toBeTruthy();
+    expect(silabas.esDiptongo('agua')).toBeTruthy();
+    expect(silabas.esDiptongo('pie')).toBeTruthy();
+  });
 });
