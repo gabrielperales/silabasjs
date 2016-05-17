@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "\"\"",
+  "ava": {
+    "require": [
+      "./test/helpers/setup-browser-env.js"
+    ]
+  },
   "scripts": {
-    "test": "karma start"
+    "test": "ava",
+    "watch:test": "ava --watch --tap | tap-notify | tap-colorize"
   },
   "repository": {
     "type": "git",
@@ -20,10 +26,9 @@
   },
   "homepage": "https://github.com/gabrielperales/silabasjs",
   "devDependencies": {
-    "jasmine-core": "^2.3.4",
-    "karma": "^0.12.36",
-    "karma-jasmine": "^0.3.5",
-    "karma-phantomjs-launcher": "^0.2.0",
-    "phantomjs": "^1.9.17"
+    "ava": "^0.14.0",
+    "jsdom": "^9.0.0",
+    "tap-colorize": "^1.2.0",
+    "tap-notify": "^1.0.0"
   }
 }
