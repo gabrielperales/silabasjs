@@ -15,3 +15,14 @@ test('Una consonante entre dos vocales siempre forma sílaba con la vocal que si
   t.deepEqual(silabas('eso'), ['e', 'so']);
   t.deepEqual(silabas('ira'), ['i', 'ra']);
 });
+
+test('Entre dos consonantes contiguas siempre hay una frontera silábica', t => {
+  t.deepEqual(silabas('alba'), ['al', 'ba']);
+  t.deepEqual(silabas('isla'), ['is', 'la']);
+  t.deepEqual(silabas('arma'), ['ar', 'ma']);
+});
+
+test('Combinaciones de tres consonantes adyacentes', t => {
+  t.deepEqual(silabas('abstemio'), ['abs', 'te', 'mio']);
+  t.deepEqual(silabas('desgracia'), ['des', 'gra', 'cia']);
+});
