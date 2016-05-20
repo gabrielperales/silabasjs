@@ -47,45 +47,55 @@ test('Entre vocales fuertes siempre habrá un límite silábico', t => {
   t.deepEqual(silabas('loor'), ['lo', 'or']);
 });
 
-test('Las combinaciones de dos vocales (una fuerte y una débil), pueden formar \
-     diptongos o hiatos', t => {
-  // diptongos (vocal debil + vocal fuerte)
+test('Las combinaciones de una vocal débil y una fuerte pueden formar diptongos', t => {
+  // diptongos (vocal débil + vocal fuerte)
   t.deepEqual(silabas('hacia'), ['ha', 'cia']);
   t.deepEqual(silabas('cuatro'), ['cua', 'tro']);
   t.deepEqual(silabas('ciego'), ['cie', 'go']);
   t.deepEqual(silabas('luego'), ['lue', 'go']);
   t.deepEqual(silabas('afectuosidad'), ['a', 'fec', 'tuo', 'si', 'dad']);
-  // hiatos (vocal debil + vocal fuerte)
-  /*
+});
+
+test('Las combinaciones de una vocal débil y una fuerte pueden formar hiatos', t => {
+  // hiatos (vocal débil + vocal fuerte)
   t.deepEqual(silabas('liar'), ['li', 'ar']);
   t.deepEqual(silabas('lié'), ['li', 'é']);
   t.deepEqual(silabas('actuar'), ['ac', 'tu', 'ar']);
   t.deepEqual(silabas('actué'), ['ac', 'tu', 'é']);
   t.deepEqual(silabas('actuó'), ['ac', 'tu', 'ó']);
-  */
-  // diptongo (vocal fuerte + vocal debil)
+});
+
+test('Las combinaciones de una vocal fuerte y una débil pueden formar un diptongo', t => {
+  // diptongo (vocal fuerte + vocal débil)
   t.deepEqual(silabas('baile'), ['bai', 'le']);
   t.deepEqual(silabas('balaustrada'), ['ba', 'laus', 'tra', 'da']);
   t.deepEqual(silabas('peine'), ['pei', 'ne']);
   t.deepEqual(silabas('deuda'), ['deu', 'da']);
   t.deepEqual(silabas('hoy'), ['hoy']);
   t.deepEqual(silabas('bou'), ['bou']);
-  // hiato (vocal fuerte + vocal debil)
+});
+
+test('Las combinaciones de una vocal fuerte y una débil pueden formar un hiato', t => {
+  // hiato (vocal fuerte + vocal débil)
   t.deepEqual(silabas('caída'), ['ca', 'í', 'da']);
   t.deepEqual(silabas('baúl'), ['ba', 'úl']);
   t.deepEqual(silabas('reí'), ['re', 'í']);
   t.deepEqual(silabas('reúno'), ['re', 'ú', 'no']);
   t.deepEqual(silabas('oído'), ['o', 'í', 'do']);
   t.deepEqual(silabas('noúmero'), ['no', 'ú', 'me', 'ro']);
-  // diptongo (vocal debil + vocal debil)
+});
+
+test('Las combinaciones de una vocal débil y otra débil pueden formar un diptongo', t => {
+  // diptongo (vocal débil + vocal débil)
   t.deepEqual(silabas('cuidado'), ['cui', 'da', 'do']);
   t.deepEqual(silabas('ciudad'), ['ciu', 'dad']);
-  // hiato (vocal debil + vocal debil)
-  /*
+});
+
+test('Las combinaciones de una vocal débil y otra débil pueden formar un hiato', t => {
+  // hiato (vocal débil + vocal débil)
   t.deepEqual(silabas('huir'), ['hu', 'ir']);
   t.deepEqual(silabas('veintiuino'), ['vein', 'ti', 'u', 'no']);
   t.deepEqual(silabas('chiíta'), ['chi', 'í', 'ta']);
-  */
 });
 
 test('Ataque complejo entre vocales V C C V -> V - CCV', t => {
@@ -99,4 +109,9 @@ test('Ataque complejo entre vocales V C C V -> V - CCV', t => {
 test('consonante + /s/ + vocal -> C - SV', t => {
   t.deepEqual(silabas('salsa'), ['sal', 'sa']);
   t.deepEqual(silabas('manso'), ['man', 'so']);
+  t.deepEqual(silabas('subsanar'), ['sub', 'sa', 'nar']);
+  t.deepEqual(silabas('adsorción'), ['ad', 'sor', 'ción']);
+  t.deepEqual(silabas('cansado'), ['can', 'sa', 'do']);
+  t.deepEqual(silabas('pulso'), ['pul', 'so']);
+  t.deepEqual(silabas('persona'), ['per', 'so', 'na']);
 });
