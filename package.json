@@ -1,8 +1,8 @@
 {
-  "name": "silabasjs",
+  "name": "silabify",
   "version": "1.0.0",
   "description": "",
-  "main": "\"\"",
+  "main": "index.js",
   "ava": {
     "require": [
       "./test/helpers/setup-browser-env.js"
@@ -10,23 +10,30 @@
   },
   "scripts": {
     "test": "ava",
+    "prebuild": "npm install",
+    "build:debug": "java -jar node_modules/google-closure-compiler/compiler.jar --formatting PRETTY_PRINT --compilation_level WHITESPACE_ONLY --language_in ECMASCRIPT6_STRICT --output_wrapper %output% --language_out ES5_STRICT --js_output_file dist/silabify.js src/silabify.js",
+    "build:production": "java -jar node_modules/google-closure-compiler/compiler.jar --compilation_level ADVANCED_OPTIMIZATIONS --language_in ECMASCRIPT6_STRICT --language_out ES5_STRICT --output_wrapper '(function(){%output%}());'  --js_output_file dist/silabify.min.js src/silabify.js",
+    "build": "npm run build:debug; npm run build:production",
     "watch:test": "ava --watch --tap | tap-notify | tap-colorize"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gabrielperales/silabasjs.git"
+    "url": "https://github.com/gabrielperales/silabify.git"
   },
   "keywords": [
     "silabas"
   ],
-  "author": "Gabriel Perales",
+  "author": {
+    "name": "Gabriel Perales"
+  },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gabrielperales/silabasjs/issues"
+    "url": "https://github.com/gabrielperales/silabify/issues"
   },
-  "homepage": "https://github.com/gabrielperales/silabasjs",
+  "homepage": "https://github.com/gabrielperales/silabify",
   "devDependencies": {
     "ava": "^0.14.0",
+    "google-closure-compiler": "^20160517.1.0",
     "jsdom": "^9.0.0",
     "tap-colorize": "^1.2.0",
     "tap-notify": "^1.0.0"
