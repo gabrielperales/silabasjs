@@ -1,23 +1,40 @@
 # Silabify
 
-Librería para la descomposición silábica de palabras.
+Syllabify spanish words
 
-# Instalación
-
+## Install
 
 ```bash
-git clone https://github.com/gabrielperales/silabify.git
+$ git clone https://github.com/gabrielperales/silabify.git
 ```
 
 ```bash
-cd silabify && npm run build
+$ cd silabify && npm run build
 ```
 
-```bash
-npm install silabify
+## Usage
+
+```javascript
+const silabify = require('silabify');
+
+silabify('Gabriel');
+//=> ['Ga', 'briel']
 ```
 
+## API
 
-Recursos:
-- [Reglas de silabación](http://elies.rediris.es/elies4/Fon2.htm)
-- [Reglas de acentuación](http://elies.rediris.es/elies4/Fon4.htm)
+### silabify(word)
+
+#### word
+
+Type: `String`
+
+Word to syllabize.
+
+## Resources:
+- [Syllabify rules](http://elies.rediris.es/elies4/Fon2.htm)
+- [Accent punctuation rules](http://elies.rediris.es/elies4/Fon4.htm)
+
+## License
+
+MIT © [Gabriel Perales](http://gabriel.perales.me)
