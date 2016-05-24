@@ -1,6 +1,6 @@
 {
   "name": "silabify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Syllabify Spanish Words",
   "main": "index.js",
   "ava": {
