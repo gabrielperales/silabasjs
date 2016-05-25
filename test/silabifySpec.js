@@ -1,5 +1,5 @@
 'use strict';
-import silabify from '../src/silabify';
+import silabify from '../';
 import test from 'ava';
 
 test('Una vocal constituye una sílaba', t => {

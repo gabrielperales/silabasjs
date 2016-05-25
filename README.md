@@ -1,4 +1,4 @@
-# Silabify
+# Silabify [![Build Status](https://travis-ci.org/gabrielperales/silabify.svg?branch=master)](https://travis-ci.org/gabrielperales/silabify)
 
 Syllabify spanish words. [Try it out](https://tonicdev.com/57447382a9e8791200e1df5a/574476b0a9e8791200e1e055)
 

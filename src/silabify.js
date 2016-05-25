@@ -26,7 +26,8 @@
   const TRIPHTHONG = new RegExp(`^(${W_VOWEL.source}${S_VOWEL.source}(?:${W_VOWEL.source}|y))`, 'i');
   const CONSONANT_GROUPS = new RegExp(`^(${O_CONSONANT.source}${L_CONSONANT.source}|dr|kr|ll|rr|ch)`, 'i');
 
-  return (word = '') => {
+  return (word) => {
+    word = word || '';
     const syllables = [];
 
     for (let letter = 0, jump = 0, len = word.length; letter < len; letter = jump) {
