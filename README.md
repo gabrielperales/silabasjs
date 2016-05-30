@@ -4,7 +4,7 @@ Syllabify spanish words. [Try it out](https://tonicdev.com/57447382a9e8791200e1d
 
 ## Install
 
-You can install it through NPM or cloning this repo
+You can install it through NPM or Bower
 
 
 - NPM:
