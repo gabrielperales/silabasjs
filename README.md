@@ -13,14 +13,9 @@ $ npm install silabify
 ```
 
 
-- Cloning this repo (for use within a browser):
+- Bower:
 ```bash
-$ git clone https://github.com/gabrielperales/silabify.git
-```
-
-```bash
-$ cd silabify && npm run build
-# this command will generate two builds in the *dist* folder
+$ bower install silabify
 ```
 
 

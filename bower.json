@@ -1,0 +1,30 @@
+{
+  "name": "silabify",
+  "description": "Syllabify Spanish Words",
+  "main": "dist/silabify.js",
+  "authors": [
+    "Gabriel Perales"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "words",
+    "syllabify",
+    "syllables",
+    "hyphenate",
+    "spanish"
+  ],
+  "homepage": "https://github.com/gabrielperales/silabify",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}
